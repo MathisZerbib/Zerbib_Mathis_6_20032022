@@ -1,0 +1,110 @@
+@import url("photographer.css");
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+}
+
+h1 {
+    color: #901C1C;
+    margin-right: 100px;
+}
+
+p {
+    margin: 0;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 100px;
+}
+
+.flex {
+    display: flex;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.noDeco a,
+p,
+i {
+    color: black;
+    /* blue colors for links too */
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.photographer_section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    align-items: center;
+    text-align: center;
+}
+
+.photographer_section article {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 33%;
+    padding: 15px 0;
+}
+
+.photographer_section article h2 {
+    color: #D3573C;
+    font-size: 36px;
+    margin: 0;
+}
+
+.photographer_section article img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sub-container-card {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    /*breakpoint tablet */
+    .photographer_section article {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* breakpoint smartphone */
+    .photographer_section article {
+        width: 100%;
+    }
+}

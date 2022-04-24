@@ -1,0 +1,277 @@
+#contact_modal {
+    display: none;
+}
+
+.photograph-header {
+    background-color: #FAFAFA;
+    justify-self: center;
+    justify-content: space-around;
+    align-items: center;
+    height: fit-content;
+    padding: 3vw;
+}
+
+.photograph-header img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact_button,
+.sendForm_button {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    padding: 11px;
+    width: 170px;
+    height: 70px;
+    border: none;
+    background-color: #901C1C;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    border-radius: 5px;
+    background-color: #DB8876;
+    width: 50%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 25vw;
+    top: 5vh;
+    /* Full height */
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px;
+    margin: auto;
+}
+
+.modal header {
+    justify-content: space-between;
+    width: 100%;
+}
+
+.modal header img {
+    cursor: pointer;
+}
+
+.modal header h2 {
+    font-size: 64px;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/*=== Trigger  ===*/
+
+.animate {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+/*=== FADE IN  ===*/
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form label {
+    color: #312E2E;
+    font-size: 28px;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: self-start;
+}
+
+form input {
+    width: 100%;
+    height: 68px;
+    border: none;
+    border-radius: 5px;
+    font-size: 24px;
+}
+
+.filters {
+    padding: 0 3vw;
+    margin: 5% 0;
+}
+
+.filters label {
+    font-weight: 600;
+    padding: 0 1%;
+}
+
+select {
+    padding: 1% 2%;
+    color: white;
+    background-color: #901C1C;
+    border-radius: 5px;
+    height: 75px;
+    font-size: 20px;
+    width: 200px;
+    -moz-appearance: none;
+    /* Firefox */
+    -webkit-appearance: none;
+    /* Safari and Chrome */
+    appearance: none;
+    cursor: pointer;
+}
+
+#arrow-icon {
+    position: relative;
+    right: 40px;
+    color: white;
+}
+
+.gallery-content {
+    padding: 0px 100px;
+}
+
+.gallery-item {
+    width: 200px;
+    padding: 5px;
+}
+
+.cardHeader {
+    width: 250px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.gallery-container {
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+.imageWallContainer .cardWrapper {
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: fit-content;
+    width: 33%;
+    padding: 30px 0;
+}
+
+.imageWallContainer .cardWrapper img,
+video {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}
+
+#lightbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardHeader p,
+.cardHeader i {
+    color: #901C1C;
+}
+
+.cardHeader i {
+    display: flex;
+    width: 20%;
+    place-content: space-around;
+    cursor: pointer;
+}
+
+
+/* Modal Contact Form */
+
+.formData[data-error]::after {
+    padding: 10px 0;
+    margin-left: auto;
+    content: attr(data-error);
+    color: white;
+    display: block;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    text-align: right;
+    line-height: 0.3;
+    opacity: 0;
+    transition: 0.3s;
+    font-size: 18px;
+}
+
+.formData[data-error-visible="true"]::after {
+    opacity: 1;
+}
+
+.formData[data-error-visible="true"] .text-control {
+    border: 2px solid white;
+}
+
+
+/* Lightbox Js*/
+
+.lb-nav a.lb-next {
+    position: fixed;
+    right: 0;
+    top: 0;
+}
+
+.lb-nav a.lb-prev {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+
+/* .lb-closeContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+} */
+
+select option {
+    font-size: 24px;
+}
+
+iframe {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+}

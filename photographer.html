@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="min-width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/simpleLightbox.min.css">
+
+    <title>Fisheye - photographe </title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye" />
+        </a>
+    </header>
+    <main id="main">
+        <div class="photograph-header flex">
+            <div class="photograph-text">
+
+            </div>
+
+            <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
+            <div class="photographer-image">
+
+            </div>
+        </div>
+
+        <div class="gallery-content flex wrap column">
+            <div class="filters">
+                <label for="filters">Trier par :</label>
+                <select name="filters" id="filters">
+                    <option value="-1">--</option>
+                    <option selected value="popularite">Popularité</option>
+                    <option value="date">Date</option>
+                    <option value="titre">Titre</option>
+                </select>
+                <span class="fa-solid fa-arrow-down" id="arrow-icon"></span>
+            </div>
+            <div class="imageWallContainer flex wrap">
+
+            </div>
+        </div>
+    </main>
+    <div id="contact_modal">
+        <div class="modal  animate fadeIn">
+            <header>
+                <h2>Contactez-moi</h2>
+                <img src="assets/icons/close.svg" onclick="closeModal()" alt="close contact modal " />
+            </header>
+            <form class="formData animate fadeIn" onsubmit="return submitForm()">
+                <div class="formData" data-error="Veuillez entrer un prénom valide">
+                    <label for="first">Prénom</label>
+                    <input class="text-control" type="text" id="first" name="first" minlength="2" />
+                </div>
+
+                <div class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom">
+                    <label for="last">Nom</label><br>
+
+                    <input class="text-control" type="text" id="last" name="last" />
+                </div>
+
+
+                <div class="formData" data-error="Veuillez entrer un e-mail valide">
+                    <label for="email">E-mail</label><br>
+                    <input class="text-control" type="email" id="email" name="email" />
+                </div>
+
+                <div class="formData" data-error="Veuillez entrer un minimum de 30 caractères">
+                    <label for="message">Votre message</label>
+                    <input class="text-control" type="text" id="message" name="message" minlength="30" />
+                </div>
+
+                <button type="submit" class="sendForm_button">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="./scripts/factories/media.js"></script>
+    <script src="./scripts/factories/photographer.js"></script>
+
+    <!-- Lightbox config script  -->
+    <script src="./scripts/utils/simpleLightbox.min.js"></script>
+    <script defer>
+        window.onload = () => {
+            new SimpleLightbox({
+                elements: '.imageWallContainer a',
+                videoRegex: new RegExp(/\.mp4/)
+            });
+        }
+    </script>
+    <script src="./scripts/pages/photographer.js"></script>
+
+    <script defer src="./scripts/utils/contactForm.js"></script>
+
+
+    <!-- filters Script -->
+
+    <script>
+        var div = document.getElementById('filters');
+        var icon = document.getElementById('arrow-icon');
+        var open = false;
+
+        div.addEventListener('click', function() {
+            if (open) {
+                icon.className = 'fa fa-arrow-down';
+            } else {
+                icon.className = 'fa fa-arrow-up';
+            }
+
+            open = !open;
+
+        });
+        // lightbox.option({
+        //     'resizeDuration': 300,
+        //     'imageFadeDuration': 300,
+        //     "alwaysShowNavOnTouchDevices": true,
+        //     'disableScrolling': true,
+        //     'fitImagesInViewport': true
+        // })
+    </script>
+</body>
+
+</html>
