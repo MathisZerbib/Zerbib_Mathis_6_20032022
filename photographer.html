@@ -6,7 +6,7 @@
     />
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
     <meta charset="utf-8">
-    <meta name="viewport" content="min-width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=DM+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/simpleLightbox.min.css">
@@ -89,7 +89,7 @@
 
     <!-- Lightbox config script  -->
     <script src="./scripts/utils/simpleLightbox.min.js"></script>
-    <script defer>
+    <script>
         window.onload = () => {
             new SimpleLightbox({
                 elements: '.imageWallContainer a',
@@ -119,13 +119,6 @@
             open = !open;
 
         });
-        // lightbox.option({
-        //     'resizeDuration': 300,
-        //     'imageFadeDuration': 300,
-        //     "alwaysShowNavOnTouchDevices": true,
-        //     'disableScrolling': true,
-        //     'fitImagesInViewport': true
-        // })
     </script>
 </body>
 
