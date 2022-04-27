@@ -1,6 +1,6 @@
     async function getPhotographers() {
-        var obj;
-        var photographers = []
+        let obj;
+        let photographers = []
         await fetch('./data/photographers.json', {
                 method: "GET",
                 headers: {

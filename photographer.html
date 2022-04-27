@@ -16,23 +16,25 @@
 
 <body>
     <header>
-        <a href="index.html">
-            <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye" />
-        </a>
+        <nav>
+            <a href="index.html">
+                <img src="assets/images/logo.png" class="logo" alt="Logo Fisheye" />
+            </a>
+        </nav>
     </header>
     <main id="main">
-        <div class="photograph-header flex">
-            <div class="photograph-text">
+        <section class="photograph-header flex">
+            <article class="photograph-text">
 
-            </div>
+            </article>
 
             <button class="contact_button" onclick="displayModal()">Contactez-moi</button>
             <div class="photographer-image">
 
             </div>
-        </div>
+        </section>
 
-        <div class="gallery-content flex wrap column">
+        <section class="gallery-content flex wrap column">
             <div class="filters">
                 <label for="filters">Trier par :</label>
                 <select name="filters" id="filters">
@@ -43,10 +45,10 @@
                 </select>
                 <span class="fa-solid fa-arrow-down" id="arrow-icon"></span>
             </div>
-            <div class="imageWallContainer flex wrap">
+            <article class="imageWallContainer flex wrap">
 
-            </div>
-        </div>
+            </article>
+        </section>
     </main>
     <div id="contact_modal">
         <div class="modal  animate fadeIn">
@@ -57,7 +59,7 @@
             <form class="formData animate fadeIn" onsubmit="return submitForm()">
                 <div class="formData" data-error="Veuillez entrer un prénom valide">
                     <label for="first">Prénom</label>
-                    <input class="text-control" type="text" id="first" name="first" minlength="2" />
+                    <input class="text-control" type="text" id="first" name="first" />
                 </div>
 
                 <div class="formData" data-error="Veuillez entrer 2 caractères ou plus pour le champ du nom">
@@ -74,7 +76,7 @@
 
                 <div class="formData" data-error="Veuillez entrer un minimum de 30 caractères">
                     <label for="message">Votre message</label>
-                    <input class="text-control" type="text" id="message" name="message" minlength="30" />
+                    <input class="text-control" type="text" id="message" name="message" />
                 </div>
 
                 <button type="submit" class="sendForm_button">Envoyer</button>

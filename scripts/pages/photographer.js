@@ -1,9 +1,9 @@
 //Mettre le code JavaScript lié à la page photographer.html
-var obj;
-var medias = []
+let obj;
+let medias = []
 let photographerName;
 let photographer = [];
-var arrayMedias = []
+let arrayMedias = []
 let filters = document.querySelector('#filters')
 
 // Get Medias from {$id}

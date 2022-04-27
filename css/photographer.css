@@ -35,12 +35,12 @@
 .modal {
     border-radius: 5px;
     background-color: #DB8876;
-    width: 50%;
+    width: 30%;
     position: fixed;
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    left: 25vw;
+    left: 33vw;
     top: 5vh;
     /* Full height */
     overflow: auto;
@@ -59,10 +59,11 @@
 
 .modal header img {
     cursor: pointer;
+    width: 3vh;
 }
 
 .modal header h2 {
-    font-size: 64px;
+    font-size: 34px;
     font-weight: normal;
     text-align: center;
 }
@@ -112,7 +113,7 @@ form {
 
 form label {
     color: #312E2E;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 form div {
@@ -124,7 +125,7 @@ form div {
 
 form input {
     width: 100%;
-    height: 68px;
+    height: 60px;
     border: none;
     border-radius: 5px;
     font-size: 24px;
@@ -233,7 +234,7 @@ video {
     line-height: 0.3;
     opacity: 0;
     transition: 0.3s;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 .formData[data-error-visible="true"]::after {

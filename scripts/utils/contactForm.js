@@ -5,12 +5,9 @@ let email = document.querySelector('#email')
 let message = document.querySelector('#message')
     // Event Listeners 
 
-document.querySelector('form').addEventListener('change', isFormValid);
+document.querySelector('form').addEventListener('change', isFormFilled);
 document.querySelector('form').addEventListener('submit', submitForm);
-firstName.addEventListener('input', isFirstNameValid);
-lastName.addEventListener('input', isLastNameValid);
-email.addEventListener('input', isEmailValid);
-message.addEventListener('input', isMessageValid);
+
 
 function displayModal() {
     const modal = document.getElementById("contact_modal");
@@ -100,7 +97,7 @@ function isMessageValid() {
     let parent = message.closest('div');
     showError(parent);
 
-    if (message.value.length <= 30) {
+    if (message.value.length <= 29) {
         return false
     }
 
@@ -109,9 +106,32 @@ function isMessageValid() {
 }
 
 
+function validateForm() {
+    var fields = [firstName, lastName, email, message]
+
+    var i, l = fields.length;
+    var fieldname;
+    for (i = 0; i < l; i++) {
+        fieldname = fields[i];
+
+        if (fieldname.value === "") {
+            return false;
+        }
+
+    }
+    return true;
+}
+// Form filled check
+function isFormFilled() {
+    if (validateForm()) {
+        enableSubmitBtn();
+    } else {
+        disableSubmitBtn();
+    }
+}
+
 // Form validation 
 function isFormValid() {
-
     if (isFirstNameValid() &&
         isLastNameValid() &&
         isEmailValid() &&
@@ -128,17 +148,24 @@ function isFormValid() {
 
 }
 
+
+
 function closeModal() {
     const modal = document.getElementById("contact_modal");
     modal.style.display = "none";
 }
 
 function submitForm() {
-    console.log(
-        'Name:', firstName.value,
-        '\nLastname:', lastName.value,
-        '\nEmail:', email.value,
-        '\nMessage:', message.value)
+    if (isFormValid()) {
+
+        console.log(
+            'Name:', firstName.value,
+            '\nLastname:', lastName.value,
+            '\nEmail:', email.value,
+            '\nMessage:', message.value)
+    }
+
+
     return false
 }
 disableSubmitBtn();

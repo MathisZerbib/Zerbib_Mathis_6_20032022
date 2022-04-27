@@ -12,7 +12,7 @@ function mediaFactory(data) {
     const { id, photographerId, title, image, video, likes, date, price } = data;
     // const picture = `assets/photographers/${portrait}`;
 
-    var observer = new IntersectionObserver(onIntersect);
+    let observer = new IntersectionObserver(onIntersect);
 
     function formatName(str) {
         let formatedStr;
@@ -40,7 +40,7 @@ function mediaFactory(data) {
         spanLike.innerHTML = likes;
 
         cardHeader.className = 'flex row cardHeader'
-        i.className = 'fa-solid fa-heart'
+        i.className = 'fa-regular fa-heart'
 
         cardWrapper.className = "flex row cardWrapper"
         a.className = "example-image-link"
@@ -68,7 +68,7 @@ function mediaFactory(data) {
         } else {
             a.href = `./assets/images/${formatName(name)}/${video}`
 
-            var source = document.createElement('source');
+            let source = document.createElement('source');
 
             source.src = `./assets/images/${formatName(name)}/${video}`;
             source.type = "video/mp4";
@@ -94,7 +94,7 @@ function mediaFactory(data) {
                 i.className = 'fa-solid fa-heart liked'
                 spanLike.innerText = parseInt(i.innerText) + 1;
             } else {
-                i.className = 'fa-solid fa-heart notliked'
+                i.className = 'fa-regular fa-heart notliked'
                 spanLike.innerText = parseInt(i.innerText) - 1;
             }
         })
