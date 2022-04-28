@@ -116,17 +116,36 @@ async function cleanData() {
 async function displayData(medias) {
     // filterByLikes(medias)
     const mediasSection = document.querySelector(".imageWallContainer");
+    let footerSection = document.querySelector('footer');
+    let main = document.querySelector('#main')
+    let likeSection = document.createElement('article');
+    let priceSection = document.createElement('article');
+
+    let iconHeart = document.createElement('i');
+    let likes = document.createElement('p');
+    let price = document.createElement('p');
+
+    iconHeart.className = 'fa-solid fa-heart'
+    price.innerText = photographer.price.toString() + ' €' + ' / jour'
 
     let photographerLikes = 0;
     medias.forEach((el) => {
         photographerLikes = photographerLikes + el.likes;
-
+        likes.innerText = photographerLikes
 
         const mediaModel = mediaFactory(el);
         const getMediaCardDOM = mediaModel.getMediaCardDOM(photographerName);
 
         mediasSection.appendChild(getMediaCardDOM);
     });
+
+
+    main.appendChild(footerSection)
+    footerSection.appendChild(likeSection)
+    likeSection.appendChild(likes)
+    likeSection.appendChild(iconHeart)
+    footerSection.appendChild(priceSection)
+    priceSection.appendChild(price)
 
 
 };

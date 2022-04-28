@@ -276,3 +276,29 @@ iframe {
     width: 250px;
     object-fit: cover;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    width: 360px;
+    border-radius: 25px 25px 0 0;
+    display: flex;
+    background: #DB8876;
+    border-radius: 5px;
+    height: 80px;
+    align-items: center;
+    place-content: space-around;
+    right: 35px;
+}
+
+footer>article {
+    display: flex;
+    place-items: center;
+}
+
+footer>article>p {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 10px;
+}
