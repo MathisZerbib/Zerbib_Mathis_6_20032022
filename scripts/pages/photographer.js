@@ -8,7 +8,7 @@ let filters = document.querySelector('#filters')
 
 // Get Medias from {$id}
 
-async function getMediasFromId() {
+async function getMedias() {
     let pId = window.location.href.split('=')[1];
 
     await fetch('./data/photographers.json')
@@ -153,7 +153,7 @@ async function displayData(medias) {
 // First init
 async function init() {
     // Récupère les datas des photographes
-    const { medias } = await getMediasFromId();
+    const { medias } = await getMedias();
     const headerSection = document.querySelector(".photograph-header")
 
     const photographerModel = photographerFactory(photographer);
