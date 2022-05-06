@@ -1,10 +1,11 @@
 //Mettre le code JavaScript lié à la page photographer.html
 let obj;
-let medias = []
+let medias = [];
 let photographerName;
 let photographer = [];
-let arrayMedias = []
-let filters = document.querySelector('#filters')
+let arrayMedias = [];
+let filters = document.querySelector('#filters');
+let posted = false;
 
 // Get Medias from {$id}
 
@@ -139,19 +140,21 @@ async function displayData(medias) {
         mediasSection.appendChild(getMediaCardDOM);
     });
 
-
-    main.appendChild(footerSection)
-    footerSection.appendChild(likeSection)
-    likeSection.appendChild(likes)
-    likeSection.appendChild(iconHeart)
-    footerSection.appendChild(priceSection)
-    priceSection.appendChild(price)
-
-
+    if (posted !== true) {
+        main.appendChild(footerSection)
+        footerSection.appendChild(likeSection)
+        likeSection.appendChild(likes)
+        likeSection.appendChild(iconHeart)
+        footerSection.appendChild(priceSection)
+        priceSection.appendChild(price)
+        posted = true;
+    }
 };
 
 // First init
 async function init() {
+
+
     // Récupère les datas des photographes
     const { medias } = await getMedias();
     const headerSection = document.querySelector(".photograph-header")
