@@ -49,6 +49,11 @@ i {
     /* blue colors for links too */
 }
 
+.location {
+    color: #901c1c;
+    font-size: .8rem;
+}
+
 a:link {
     text-decoration: none;
 }
@@ -72,17 +77,21 @@ a:link {
     padding: 15px 0;
 }
 
-.photographer_section article h2 {
+h2 {
     color: #D3573C;
     font-size: 36px;
     margin: 0;
 }
 
-.photographer_section article img {
-    height: 200px;
+.photographer_section article img,
+.photographer-image {
     width: 200px;
-    border-radius: 50%;
+    height: 200px;
     object-fit: cover;
+    border-radius: 50%;
+    background-color: #dedede;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.25));
+    transition: transform .3s ease;
 }
 
 .sub-container-card {

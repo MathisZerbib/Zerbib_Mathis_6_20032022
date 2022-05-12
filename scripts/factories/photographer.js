@@ -22,6 +22,7 @@ function photographerFactory(data) {
         h2.textContent = name;
         subText.textContent = city;
         subText.style.margin = 0;
+        subText.className = 'location'
         bold.style.margin = 0;
 
         a.setAttribute("href", `./photographer.html?id=${id}`);
@@ -53,6 +54,8 @@ function photographerFactory(data) {
         h2.textContent = name;
         subText.textContent = city;
         subText.style.margin = 0;
+        subText.className = 'location'
+        subText.style.fontSize = '1.2rem'
         bold.style.margin = 0;
 
 
